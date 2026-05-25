@@ -13,6 +13,9 @@ LLM-powered customer support assistant using Retrieval-Augmented Generation (RAG
 - FAISS vector database
 - FastAPI backend
 - Streamlit chat interface
+- Document ingestion pipeline
+- Intelligent text chunking
+- Semantic document preparation
 
 ---
 

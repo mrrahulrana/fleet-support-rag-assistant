@@ -11,3 +11,5 @@ pydantic
 tiktoken
 sentence-transformers
 streamlit
+pypdf
+unstructured

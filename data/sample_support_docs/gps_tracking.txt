@@ -1,0 +1,1 @@
+GPS telemetry includes vehicle location, ignition status, speed, trip history, and route deviation information.

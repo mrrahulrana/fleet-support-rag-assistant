@@ -1,0 +1,3 @@
+Overspeed alerts are generated when vehicle speed exceeds configured thresholds for more than 60 seconds.
+
+Maintenance alerts are generated based on mileage intervals and engine diagnostics.
