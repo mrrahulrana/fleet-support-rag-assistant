@@ -1,3 +1,9 @@
 Overspeed alerts are generated when vehicle speed exceeds configured thresholds for more than 60 seconds.
 
 Maintenance alerts are generated based on mileage intervals and engine diagnostics.
+
+Arrival alerts are generated when vehicle enters in location radius.
+
+Delay alerts are generated when arrival time elapsed.
+
+Delivered alerts are generated when user signed on delivery man's mobile app.

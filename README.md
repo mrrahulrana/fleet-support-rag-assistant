@@ -16,6 +16,10 @@ LLM-powered customer support assistant using Retrieval-Augmented Generation (RAG
 - Document ingestion pipeline
 - Intelligent text chunking
 - Semantic document preparation
+- OpenAI embedding generation
+- FAISS vector database
+- Semantic similarity search
+- Context-aware retrieval
 
 ---
 

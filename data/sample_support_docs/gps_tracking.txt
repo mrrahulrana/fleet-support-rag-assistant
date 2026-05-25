@@ -1,1 +1,7 @@
 GPS telemetry includes vehicle location, ignition status, speed, trip history, and route deviation information.
+
+GPS tracking only happens when GPS device is plugged in.
+
+Stop is recorded when location change is not happening for more than 5 mins.
+
+Halt is recorded when location change is not happening for more than 1 mins.

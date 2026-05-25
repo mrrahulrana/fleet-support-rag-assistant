@@ -1,8 +1,14 @@
 fastapi
 uvicorn
 langchain
+langchain-openai
+langchain-core
+langchain-community
+langchain-text-splitters
 langgraph
 openai
+langchain-huggingface
+sentence-transformers
 faiss-cpu
 pandas
 numpy

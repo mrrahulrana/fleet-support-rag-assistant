@@ -1,10 +1,13 @@
 from fastapi import APIRouter
+
 from app.rag.pipeline import ingest_documents
+from app.rag.retriever import retrieve_documents
 
 router = APIRouter()
 
 @router.get("/health")
 def health():
+
     return {
         "status": "healthy"
     }
@@ -20,9 +23,30 @@ def chat(query: dict):
 @router.post("/ingest-documents")
 def ingest():
 
-    chunks = ingest_documents()
+    result = ingest_documents()
 
     return {
         "status": "Documents processed",
-        "chunks_created": len(chunks)
+        "details": result
+    }
+
+@router.post("/search")
+def search(payload: dict):
+
+    query = payload.get("query")
+
+    results = retrieve_documents(query)
+
+    response = []
+
+    for result in results:
+
+        response.append({
+            "content": result.page_content,
+            "source": result.metadata
+        })
+
+    return {
+        "query": query,
+        "results": response
     }
