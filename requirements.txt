@@ -1,0 +1,13 @@
+fastapi
+uvicorn
+langchain
+langgraph
+openai
+faiss-cpu
+pandas
+numpy
+python-dotenv
+pydantic
+tiktoken
+sentence-transformers
+streamlit
