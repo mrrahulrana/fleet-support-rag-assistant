@@ -24,6 +24,10 @@ LLM-powered customer support assistant using Retrieval-Augmented Generation (RAG
 - Prompt orchestration pipeline
 - Context-aware conversational AI
 - OpenAI GPT integration
+- Multi-turn conversational memory
+- Session-aware context handling
+- Stateful conversational AI workflows
+- Context-preserving support interactions
 
 ---
 

@@ -5,6 +5,9 @@ from app.rag.retriever import retrieve_documents
 from app.rag.generate_response import (
     generate_rag_response
 )
+from app.memory.session_manager import (
+    clear_session
+)
 
 router = APIRouter()
 
@@ -20,7 +23,15 @@ def chat(payload: dict):
 
     query = payload.get("query")
 
-    result = generate_rag_response(query)
+    session_id = payload.get(
+        "session_id",
+        "default"
+    )
+
+    result = generate_rag_response(
+        query=query,
+        session_id=session_id
+    )
 
     return result
 
@@ -53,4 +64,14 @@ def search(payload: dict):
     return {
         "query": query,
         "results": response
+    }
+
+@router.delete("/session/{session_id}")
+def delete_session(session_id: str):
+
+    clear_session(session_id)
+
+    return {
+        "status": "Session cleared",
+        "session_id": session_id
     }
