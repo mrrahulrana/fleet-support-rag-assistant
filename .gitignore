@@ -1,5 +1,69 @@
+# Virtual environments
+venv/
+.env/
 .venv/
-__pycache__/
+
+# Environment variables
 .env
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Jupyter notebooks
+.ipynb_checkpoints/
+
+# Logs
+*.log
+
+# IDEs
 .idea/
-*.pyc
+.vscode/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Pytest
+.pytest_cache/
+
+# Coverage reports
+htmlcov/
+.coverage
+.coverage.*
+
+# Build artifacts
+build/
+dist/
+*.egg-info/
+
+# Streamlit cache
+.streamlit/
+
+# FAISS vector indexes
+faiss_index/
+
+# Local model cache
+.cache/
+models/
+
+# Temporary files
+tmp/
+temp/
+
+# Docker
+*.pid
+
+# SQLite databases
+*.db
+
+# Uploaded documents
+uploads/
+
+# Secrets
+secrets.json
+credentials.json
+
+# Node modules (if frontend added later)
+node_modules/

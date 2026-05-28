@@ -2,6 +2,9 @@ from fastapi import APIRouter
 
 from app.rag.pipeline import ingest_documents
 from app.rag.retriever import retrieve_documents
+from app.rag.generate_response import (
+    generate_rag_response
+)
 
 router = APIRouter()
 
@@ -13,12 +16,13 @@ def health():
     }
 
 @router.post("/chat")
-def chat(query: dict):
+def chat(payload: dict):
 
-    return {
-        "query": query,
-        "response": "LLM response placeholder"
-    }
+    query = payload.get("query")
+
+    result = generate_rag_response(query)
+
+    return result
 
 @router.post("/ingest-documents")
 def ingest():
