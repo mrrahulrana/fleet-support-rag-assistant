@@ -8,4 +8,6 @@ class AgentState(TypedDict):
 
     retrieved_context: str
 
+    tool_results: dict
+
     response: str

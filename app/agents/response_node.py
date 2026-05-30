@@ -17,6 +17,14 @@ def load_prompt():
 
     return prompt_path.read_text()
 
+def build_tool_context(tool_results):
+
+    if not tool_results:
+
+        return ""
+
+    return str(tool_results)
+
 def response_node(state):
 
     query = state["query"]
@@ -25,13 +33,22 @@ def response_node(state):
 
     context = state["retrieved_context"]
 
+    tool_context = build_tool_context(
+        state["tool_results"]
+    )
+
     history = build_chat_history(session_id)
 
     prompt_template = load_prompt()
 
     final_prompt = prompt_template.format(
+
         history=history,
+
         context=context,
+
+        tool_context=tool_context,
+
         question=query
     )
 

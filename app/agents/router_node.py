@@ -4,13 +4,8 @@ def router_node(state):
 
     query_lower = query.lower()
 
-    if (
-        "vehicle" in query_lower
-        or "alert" in query_lower
-        or "gps" in query_lower
-        or "maintenance" in query_lower
-    ):
+    if "v" in query_lower:
 
-        return "retrieve"
+        return "tools"
 
-    return "respond"
+    return "retrieve"

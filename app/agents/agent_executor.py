@@ -15,6 +15,8 @@ def run_agent(
 
         "retrieved_context": "",
 
+        "tool_results": {},
+
         "response": ""
     })
 
