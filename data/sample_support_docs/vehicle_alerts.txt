@@ -1,4 +1,4 @@
-Overspeed alerts are generated when vehicle speed exceeds configured thresholds for more than 60 seconds.
+Overspeed alerts are generated when vehicle speed exceeds configured thresholds for more than 60 seconds. After that driers get speed limit control notifications.
 
 Maintenance alerts are generated based on mileage intervals and engine diagnostics.
 

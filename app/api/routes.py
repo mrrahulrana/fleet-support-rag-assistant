@@ -9,6 +9,10 @@ from app.memory.session_manager import (
     clear_session
 )
 
+from app.agents.agent_executor import (
+    run_agent
+)
+
 router = APIRouter()
 
 @router.get("/health")
@@ -28,12 +32,16 @@ def chat(payload: dict):
         "default"
     )
 
-    result = generate_rag_response(
+    result = run_agent(
         query=query,
         session_id=session_id
     )
 
-    return result
+    return {
+        "query": result["query"],
+        "response": result["response"],
+        "session_id": result["session_id"]
+    }
 
 @router.post("/ingest-documents")
 def ingest():

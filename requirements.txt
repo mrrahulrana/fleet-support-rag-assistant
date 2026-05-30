@@ -11,6 +11,7 @@ langchain-groq
 langchain-google-genai
 langchain-huggingface
 sentence-transformers
+langgraph
 faiss-cpu
 pandas
 numpy

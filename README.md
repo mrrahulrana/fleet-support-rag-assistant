@@ -28,38 +28,35 @@ LLM-powered customer support assistant using Retrieval-Augmented Generation (RAG
 - Session-aware context handling
 - Stateful conversational AI workflows
 - Context-preserving support interactions
+- LangGraph-based AI workflow orchestration
+- Agentic AI workflow routing
+- Multi-step conversational execution
+- Context-aware AI decision pipelines
 
 ---
 
 ## 🏗️ Architecture
 
 ```mermaid
-flowchart LR
+flowchart TD
 
-A[Support Documents]
---> B[Document Loader]
+A[User Query]
+--> B[LangGraph Agent Router]
 
-B --> C[Chunking Pipeline]
+B --> C[Retrieval Node]
 
-C --> D[OpenAI Embeddings]
+C --> D[FAISS Vector Store]
 
-D --> E[FAISS Vector Store]
+D --> E[Retrieved Context]
 
-F[User Query]
---> G[Semantic Retriever]
+E --> F[Response Generation Node]
 
-G --> E
+F --> G[LLM]
 
-E --> H[Relevant Context]
+G --> H[AI Response]
 
-H --> I[Prompt Orchestration]
-
-I --> J[OpenAI GPT]
-
-J --> K[Grounded AI Response]
+H --> I[Conversation Memory]
 ```
-
----
 
 ## 🛠️ Tech Stack
 
